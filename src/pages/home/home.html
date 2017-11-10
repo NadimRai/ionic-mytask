@@ -17,7 +17,7 @@
   </ion-item>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let task of tasks">
+    <ion-item-sliding *ngFor="let task of tasks; let index = id">
       <ion-item>
         <ion-checkbox></ion-checkbox>
         <ion-item item-left text-wrap>
