@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Task } from './task';
+import { List } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  @ViewChild(List) list: List;
 
   public tasks : Task [];
 
@@ -27,7 +29,8 @@ export class HomePage {
 
   //Edit Task
   editTask(task){
-
+    task.isEdit =!task.isEdit;
+    this.list.closeSlidingItems();
   }
 
   //Delete Task
