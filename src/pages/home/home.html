@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-title padding-top padding-bottom>My Tasks Today</ion-title>
+  <ion-item>
+    <ion-input type="text" placeholder="Add a new task..."></ion-input>
+    <button ion-button item-right>
+      <ion-icon name="md-add-circle"></ion-icon>
+    </button>
+  </ion-item>
+
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-checkbox></ion-checkbox>
+        <ion-item item-left text-wrap>
+        <ion-label>New Task</ion-label>
+        </ion-item>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button>
+          <ion-icon name="ios-create"></ion-icon>
+        </button>
+      </ion-item-options>
+      <ion-item-options side="right">
+        <button ion-button>
+          <ion-icon name="md-trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
