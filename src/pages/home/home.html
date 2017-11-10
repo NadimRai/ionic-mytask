@@ -16,11 +16,11 @@
     </button>
   </ion-item>
 
-  <ion-list>
+  <ion-list no-lines>
     <ion-item-sliding *ngFor="let task of tasks; let index = id">
-      <ion-item>
+      <ion-item no-lines>
         <ion-checkbox></ion-checkbox>
-        <ion-item item-left text-wrap>
+        <ion-item no-lines item-left text-wrap>
         <ion-label>{{task.title}}</ion-label>
         </ion-item>
       </ion-item>
@@ -30,7 +30,7 @@
         </button>
       </ion-item-options>
       <ion-item-options side="right">
-        <button ion-button>
+        <button ion-button color='danger' (click)="deleteTask(id)">
           <ion-icon name="md-trash"></ion-icon>
         </button>
       </ion-item-options>
